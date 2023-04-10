@@ -7,11 +7,13 @@ import javax.swing.*;
 public class vista extends JFrame implements ActionListener {
 	private JPanel panel;
 	private JButton[] btn = new JButton[16];
-	private Color[] colors = new Color[8];
+	
+	private Color colors[] = {Color.GRAY,Color.darkGray,Color.ORANGE,Color.YELLOW, Color.WHITE,Color.PINK,Color.MAGENTA,Color.GREEN};
 	private int[] indices = new int[16];
 	private int selCarta = -1;
 	private int selCarta2 = -1;
 	private int ttlpareja = 8;
+	
 
 	public vista() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,15 +21,6 @@ public class vista extends JFrame implements ActionListener {
 
 		panel = new JPanel(new GridLayout(4, 4));
 
-//---Colores en un array---//
-		colors[0] = Color.RED;
-		colors[1] = Color.ORANGE;
-		colors[2] = Color.YELLOW;
-		colors[3] = Color.GREEN;
-		colors[4] = Color.CYAN;
-		colors[5] = Color.BLUE;
-		colors[6] = Color.MAGENTA;
-		colors[7] = Color.PINK;
 
 		for (int i = 0; i < ttlpareja; i++) {
 			int rnd = (int) (Math.random() * 8);
